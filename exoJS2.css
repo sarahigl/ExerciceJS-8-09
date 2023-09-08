@@ -1,0 +1,6 @@
+.hClasse {
+    color: black; 
+}
+.ajouterH1{
+    color: chartreuse;/* la couleur que va prendre le h1 que l'on nomme par la var pointer le bouton ajoute */
+}
