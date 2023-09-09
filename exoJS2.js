@@ -91,3 +91,31 @@ document.addEventListener("DOMContentLoaded", function () {// addevent null sans
         titre.classList.remove('ajouterH1');//ne supprimer rien pourquoi ?
     });
 });
+
+//suppression de la class au click
+supp1.addEventListener('click', function(){
+    titre.classList.remove('ajouterH1');
+});
+//toggle de l'élément au click
+toggle1.addEventListener('click', function(){
+    titre.classList.toggle('ajouterH1');
+})
+
+//EXO 3 de la mort
+
+document.body.addEventListener('click', function(event){
+    //les variable pour les capturer et celle de l'image
+    var x = event.clientX;
+    var y = event.clientY;
+    var nouvelleImage = document.createElement('img');//new element image 
+
+    nouvelleImage.src = 'https://e7.pngegg.com/pngimages/460/735/png-clipart-denis-brogniart-ah-koh-lanta-poop-photography-2017-thumbnail.png'
+    //position en fonction des coordo
+    nouvelleImage.style.position = 'absolute';
+    nouvelleImage.style.left = x + 'px';
+    nouvelleImage.style.top = y + 'px';
+
+    document.body.appendChild(nouvelleImage);//appel ajout de l'image sur le body
+    console.log('X :' + x);
+    console.log('Y :' + y);
+})
